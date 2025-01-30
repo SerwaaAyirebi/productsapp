@@ -1,0 +1,23 @@
+<div class="signup"> 
+<!-- style="background-color: rgb(22, 17, 188);"> -->
+    <!-- <img src="../../productsapp/src/assets/prodimages/Vector.svg"> -->
+    <img src="../../../assets/prodimages/Vector.svg" style="position: relative; top:21px; left:290px;">
+    <!-- <label for="username">USERNAME:</label> -->
+    <img src="../../../assets/prodimages/Group.svg" style="position: relative; bottom:500px;">
+    {{name}}
+<form #loginForm="ngForm" (ngSubmit)="sendData(loginForm)" class="mainlog">
+    <div class="enter">
+        <div class="shrink-0 mb-2 select-none text-base sm:text-sm/6 bg-red-200 text-black">
+            <img src="../../../assets/prodimages/user.svg"></div>
+        <input name="username" [(ngModel)]="data.username" id="username" placeholder="USERNAME" type="text">
+    </div>
+    <div class="pwd">
+        <div class="shrink-0 mb-2 select-none text-base sm:text-sm/6 bg-red-200 text-black">
+            <img src="../../../assets/prodimages/lock.svg"></div>
+        <input id="password" placeholder="PASSWORD" type="text" name="password" [(ngModel)]="data.password">
+    </div>
+        <button type="submit" class="border-2 border-black-200 bg-white text-blue-500 mt-55 rounded-md">LOGIN</button>
+        <p class="text-white ml-40">Forgot password?</p>
+        <img src="../../../assets/prodimages/user.svg">
+</form>    
+</div>

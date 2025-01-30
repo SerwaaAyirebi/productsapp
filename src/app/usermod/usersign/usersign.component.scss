@@ -1,0 +1,43 @@
+// .signup{
+//     background-image: url(../../productsapp/src/assets/prodimages/Vector.svg);
+// }
+.signup{
+    height:95%;
+    color:black;
+    width:100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width:300px;
+    padding:10px;
+    border-radius: 5px;
+    height: 2vh;
+}
+.enter{
+    display: flex;
+    flex-direction: row;
+    border: solid black 1px;
+    border-radius: 7px;
+    align-content: center;
+    justify-items: center;
+    padding-top: 10px;
+}
+button{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 10px;
+    height: 7vh;
+    width: 200px;
+}
+.pwd{
+    display: flex;
+    flex-direction: row;
+    border: solid black 1px;
+    border-radius: 7px;
+    align-content: center;
+    justify-items: center;
+    padding-top: 10px;
+}

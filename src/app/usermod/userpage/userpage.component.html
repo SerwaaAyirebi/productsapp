@@ -1,0 +1,96 @@
+<!--------------------------USER TABLE---------------->
+<div id="form-group">
+     <form #searchForm = "ngForm" (ngSubmit)="clear()">
+     <input type="text"
+    class="flex flex-row w-30 justify-between rounded-full bg-blue-200 items-center border-2 border-black-200 h-10 mt-3" 
+      placeholder="Search" 
+      (keyup)="search()" 
+      [(ngModel)]="searchQuery">
+     </form>  
+
+<h1>Customers Info</h1>
+<div class="tableau">
+    <table>
+        <thead class="shadow-sm border-none gap-x-10">
+            <td>Index</td>
+            <td>Profile</td>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Email</td>
+            <td>Role</td>
+            <td>Action</td>
+        </thead>
+        <tbody  class="shadow-sm border-none ">
+            <tr *ngFor="let u of allUsers; index as i">
+            <td>{{i}}</td>
+            <td><img [src]="u.image">
+            <p *ngIf="!u.image">No image</p>
+            </td>
+            <td ><i class="fas fa-user"></i>
+                {{u.name}}</td>
+            <td>{{u.age}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.role}}</td>
+            <td><div class="flex flex-row space-x-4 ">
+                    <button class="bg-blue-400 rounded-2xl p-3 w-20" (click)="edit(i,u)">Edit</button>
+                
+                    <button class="bg-red-500 rounded-2xl p-3 w-20" (click)="delete(i)">Delete</button>
+            <!-- <td class="bg-yellow-400"  *ngIf="u.image"> = 'available'</td>
+            <td class="bg-orange-300"  *ngIf="!u.image"> = 'out of stock'</td> -->
+            <!-- <div class="container">
+                <input type="checkbox" id="check">
+                <label for="check" class="butt"></label>
+
+            </div>     -->
+            </div>
+        </td> 
+        </tr>
+        </tbody>   
+    </table>
+    <!-- <div class="flex gap-5 bg-red-300">
+        <div>Index</div>
+        <div>Name</div>
+        <div>Age</div>
+    </div>
+    <div *ngFor="let u of allUsers; index as i"  class="flex flex-col mt-4 myBox">
+        <div  class="flex gap-5  mb-4">
+            <div>{{i}}</div>
+            <div>{{u.name}}</div>
+            <div>{{u.age}}</div>
+        </div>
+    </div> -->
+    <!-- <div class="grid grid-cols-3 gap-10">
+        <div *ngFor="let u of allUsers; index as i"   class="h-[300px] w-[300px] bg-green-300 flex flex-col items-center justify-center myCard">
+             <img *ngIf="u.image" [src]="u.image" class="h-[20px] w-[20px]" >
+             <p *ngIf="!u.image"  >No Image</p>
+            <h1>{{u.name}}</h1>
+            <p>{{u.age}}</p>
+            <p>{{u.email}}</p>
+        </div>
+    </div> -->
+</div>
+</div>
+<!-----------------------FORMS------------------>
+<section id="login">
+    <div class="loggg">
+        <h1>Welcome Back!</h1>
+        <button class="gog">Log in via google</button>
+            <p>-------------or--------------</p>
+        <form #loginForm="ngForm" (ngSubmit)="sendData(loginForm)" class="logform" autocomplete="off">
+            <input name="name" [(ngModel)]="data.name" id="name" placeholder="NAME" type="text">
+            <input name="age" [(ngModel)]="data.age" id="age" placeholder="AGE" type="text">
+            <input name="email" [(ngModel)]="data.email" id="email" placeholder="EMAIL" type="text">
+            <input name="role" [(ngModel)]="data.role" id="role" placeholder="ROLE" type="text">
+            <!-- <input name="password" [(ngModel)]="data.password" id="password" placeholder="PASSWORD" type="text"> -->
+        <div> 
+            <a href="#">Forgot Password ?</a>
+        </div>
+        <div class="log">
+            <button type="submit">Log in</button>
+        </div>
+        <div>
+            <p class="q">Don't have an account? <a routerLink="/signup">Create an account</a></p>
+        </div>
+    </form>
+    </div>
+</section>

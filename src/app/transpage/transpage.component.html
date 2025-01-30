@@ -1,0 +1,20 @@
+<h1 class="font-bold text-4xl">Daily Transactions</h1>
+<div>
+    <table>
+        <thead class="shadow-sm border-none">
+            <td>Index</td>
+            <td>Trans Id</td>
+            <td>Product</td>
+            <td>Amount</td>
+            <td>Status</td>
+        </thead>
+        <tbody *ngFor="let t of allTrans; index as i" class="shadow-sm border-none">
+            <td>{{i}}</td>
+            <td>{{t.transId}}</td>
+            <td>{{t.product}}</td>
+            <td>{{t.amount}}</td>
+            <td>{{t.status}}</td>
+        </tbody>
+        
+    </table>
+</div>

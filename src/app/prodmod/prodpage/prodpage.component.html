@@ -1,0 +1,21 @@
+<h1 class="font-bold text-center text-2xl pt-30 text-white mt-10">i</h1>
+<div>
+    <h2 class="font-bold text-center mt-10 text-2xl text-white">List of Items</h2>
+    <table class="text-center">
+        <thead class="shadow-sm border-none">
+            <td>Index</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Status</td>
+        </thead>
+        <tbody *ngFor="let p of allProducts;index as i" class="shadow-sm border-none">
+                <td>{{i}}</td>
+                <td>{{p.product}}</td>
+                <td>{{p.cost}}</td>
+            <!-- <div>
+                <p *ngIf="p.status == 'Paid'" class="text-green-400">Paid</p>
+                <p *ngIf="p.status == 'Unpaid'" class="text-red-500">Unpaid</p>
+            </div> -->
+        </tbody>
+    </table>
+</div>

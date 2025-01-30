@@ -1,0 +1,21 @@
+// .nav{
+//     height: 10%;
+//     background-color: aqua;
+// }
+// .route{
+//     height: 90%;
+//     background-color: red;
+// }
+.nav a{
+    margin: 20px;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+.nav{
+    position: sticky;
+    top:0;
+    width:100%;
+}

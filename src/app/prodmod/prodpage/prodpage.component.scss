@@ -1,0 +1,25 @@
+table{
+    // background-image: url(https://media.istockphoto.com/id/1936860353/photo/supermarket-with-empty-aisles-and-different-products-on-shelves.jpg?s=1024x1024&w=is&k=20&c=TjpVbDTR_XWe5QZCNrrmt-j6LjSsFAsroilXsSMwARs=);
+    width: 80%;
+    text-align: center;
+    color: black;
+    background-color: white;
+    height: 60vh;
+    margin-top: 10px;
+    border-style: hidden;
+    // margin-left: 60px;
+
+
+}
+.heading{
+    font-weight: bold;
+}
+table, thead, td {
+    border: 1px solid black;
+    border:none;
+    // border: 20px;
+    // margin: 20px;
+    margin-top: 10px;
+    // border-style: hidden;
+    height: 7vh;
+  }
